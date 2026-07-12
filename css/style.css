@@ -192,3 +192,24 @@ font-weight:bold;
 color:red;
 font-weight:bold;
 }
+
+.progress-card{
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:20px;
+}
+
+.progress{
+height:18px;
+background:#ececec;
+border-radius:30px;
+overflow:hidden;
+margin:20px 0;
+}
+
+.progress-fill{
+height:100%;
+background:#16c784;
+transition:.6s;
+}
