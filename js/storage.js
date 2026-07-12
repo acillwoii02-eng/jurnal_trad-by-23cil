@@ -1,17 +1,17 @@
-// Simpan ke Local Storage
-function saveTrades(trades) {
-    localStorage.setItem("trades", JSON.stringify(trades));
-}
+function addTrade(pair, type, entry, exit) {
 
-// Ambil dari Local Storage
-function loadTrades() {
-    return JSON.parse(localStorage.getItem("trades")) || [];
-}
-
-// Tambah trade
-function addTrade(trade) {
     const trades = loadTrades();
+
+    const trade = {
+        pair: pair,
+        type: type,
+        entry: entry,
+        exit: exit,
+        profit: exit - entry
+    };
+
     trades.push(trade);
+
     saveTrades(trades);
 }
 
